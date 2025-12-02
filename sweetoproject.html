@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweeto</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+    <style>
+        .navbar-bg{ background-color:rgb(199, 123, 123)!important; }
+        .navbar-light .navbar-nav .nav-link{ color: darkolivegreen; }
+        .navbar-light .navbar-nav .nav-link.active{ color: darkolivegreen; }
+
+        .text-color{ color:rgb(205, 188, 73)!important; }
+        .text{ color:darkolivegreen!important; }
+
+        .carousel-btn{
+            border:none;
+            background-color:rgb(242, 242, 104);
+            color:rgb(0, 0, 0);
+            font-family:'Times New Roman', Serif;
+            margin-left:400px;
+        }
+
+.lobster-regular {
+  font-family: "Lobster", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+        .carousel img{ height:500px; }
+
+        .about-color, .bg-color{
+            background-color:rgb(255, 173, 114)!important;
+        }
+        .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+        .about-img{
+            height:300px!important;
+            width:490px;
+            float:right;
+            margin-right:160px;
+        }
+
+        .carousel-caption{
+            top:160px;
+            left:300px;
+            text-align:left;
+            color:rgb(30, 20, 20);
+            font-family:"Lobster", sans-serif;
+        }
+
+        .carousel-caption h2{ font-size:50px; }
+        .carousel-caption p{ font-size:18px; font-weight:bold; text-align:center; }
+
+        .about-last{ background-color:rgb(158,174,131); }
+
+        .div-height{ height:40px; }
+
+        .card-btn{
+            border:none;
+            background-color:rgb(255,240,75);
+        }
+        .new{
+          background-color: rgb(246, 246, 157)!important;
+        }
+
+        .effect-card img{ transition: transform 0.4s; }
+        .effect-card:hover img{ transform:scale(1.1); }
+
+        .banner{ background-color: rgb(213, 213, 149)!important; }
+        .banner-img{ height:250px!important; }
+        /* ---------- GLOBAL RESPONSIVE FIXES ---------- */
+
+/* Make all images responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Fix carousel caption alignment on mobile */
+@media (max-width: 768px) {
+    .carousel-caption {
+        top: 20%;
+        left: 0;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .carousel-caption h2 {
+        font-size: 28px;
+    }
+
+    .carousel-caption p {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .carousel-btn {
+        margin-left: 0 !important;
+        margin-top: 10px;
+    }
+}
+
+/* ABOUT SECTION */
+@media (max-width: 768px) {
+    .about-img {
+        width: 100% !important;
+        float: none;
+        margin: 20px auto;
+    }
+
+    #about .col-6 {
+        width: 100% !important;
+        margin-left: 0 !important;
+    }
+}
+
+/* PRODUCT GRID FIX (cards should stack on mobile) */
+@media (max-width: 768px) {
+    .col-3, .col-5 {
+        width: 100% !important;
+        margin-bottom: 20px;
+    }
+
+    .card {
+        width: 100% !important;
+    }
+}
+
+/* SERVICES BANNER */
+@media (max-width: 768px) {
+    #services .col-8,
+    #services .col {
+        width: 100% !important;
+        text-align: center;
+    }
+}
+
+/* REVIEW SECTION */
+@media (max-width: 768px) {
+    #reviews .col-3 {
+        width: 100% !important;
+        margin-bottom: 15px;
+    }
+}
+
+/* CONTACT SECTION */
+@media (max-width: 768px) {
+    #contact .col-5,
+    #contact .col {
+        width: 100% !important;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light" style="background-image: url(navimg.jpg);background-size: cover;">
+  <div class="container-fluid">
+    <a class="navbar-brand fs-2 fst-italic fw-bold ms-5 text" href="#">
+        Sweeto <i class="fa-solid fa-cake-candles fs-4"></i>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto fs-5">
+        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#newproducts">New Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#ourproducts">Our Products</a></li>
+        <li class="nav-item"><a class="nav-link" href="#reviews">Reviews</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact us</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- CAROUSEL -->
+<div id="carouselExampleCaptions" class="carousel slide bg-color container-fluid" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></button>
+  </div>
+
+  <div class="carousel-inner img">
+    <div class="carousel-item active">
+      <img src="orange.avif" class="d-block w-100" alt="Cake Slide">
+      <div class="carousel-caption">
+        <h2 class="text-center">We Bake Delicious Cakes With Love</h2>
+        <p>Indulge in freshly baked happiness. From dreamy cakes to delicate pastries, every bite is crafted with love and the finest ingredients. Celebrate your sweetest moments with us."</p>
+        <button class="btn text-dark btn-lg rounded carousel-btn">Discover now</button>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="orange.avif" class="d-block w-100" alt="Cake Slide">
+      <div class="carousel-caption">
+        <h2 class="text-center">We Bake Delicious Cakes With Love</h2>
+        <p>Indulge in freshly baked happiness. From dreamy cakes to delicate pastries, every bite is crafted with love and the finest ingredients. Celebrate your sweetest moments with us."</p>
+        <button class="btn text-dark btn-lg rounded carousel-btn">Discover now</button>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <img src="orange.avif" class="d-block w-100" alt="Cake Slide">
+      <div class="carousel-caption">
+        <h2 class="text-center">Made Fresh With Love</h2>
+        <p>Indulge in freshly baked happiness. From dreamy cakes to delicate pastries, every bite is crafted with love and the finest ingredients. Celebrate your sweetest moments with us."</p>
+        <button class="btn text-dark btn-lg rounded carousel-btn">Discover now</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about" class="banner p-5">
+    <h3 class="text-center lobster-regular fs-1 text">About Us</h3>
+
+    <div class="row d-flex justify-content-between text">
+      <div class="col-6 ms-5">
+        <h2 class="mt-5">Established 1998</h2>
+        <h3>Crafting sweet memories for every celebration.</h3>
+
+        <p>
+          Since 1998, we have been dedicated to baking treats that bring joy and flavor.
+          What began as a small family bakery has grown into a beloved brand.
+          Using only the finest ingredients, we create cakes, cookies, pastries, and croissants
+          made with passion and perfection. Whether it's a birthday, wedding, or simple indulgence—
+          we make every occasion sweeter.
+        </p>
+      </div>
+
+      <div class="col">
+        <img class="ms-5 about-img img-thumbnail" src="cake1.jpeg" alt="About Image">
+      </div>
+    </div>
+</section>
+
+
+<!-- NEW PRODUCTS -->
+  <div class="container-fluid new"id="newproducts">
+    <h3 class="text-center mb-5 text lobster-regular fs-1" style="padding-top:60px;">New Products</h3>
+
+    <div class="row">
+
+      <div class="col-3">
+        <div class="card h-75 mx-auto" style="width:16rem;">
+          <img src="creambun.jpg" class="card-img-top h-50 img-thumbnail" alt="">
+          <div class="card-body text-center">
+            <h5 class="card-title">Chocolate Cream Bun</h5>
+            <p class="card-text fs-4"><i class="fa-solid fa-indian-rupee-sign"></i>250</p>
+            <a href="#" class="btn btn-warning mx-3">View Details</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-3">
+        <div class="card h-75 mx-auto" style="width:16rem;">
+          <img src="macarons.jpeg" class="card-img-top h-50 img-thumbnail" alt="">
+          <div class="card-body text-center">
+            <h5 class="card-title">Strawberry Macarons</h5>
+            <p class="card-text fs-4"><i class="fa-solid fa-indian-rupee-sign"></i>180</p>
+            <a href="#" class="btn btn-warning mx-3">View Details</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-3">
+        <div class="card h-75 mx-auto" style="width:16rem;">
+          <img src="magical.jpeg" class="card-img-top h-50 img-thumbnail" alt="">
+          <div class="card-body text-center">
+            <h5 class="card-title">Magical Rainbow Cake</h5>
+            <p class="card-text fs-4"><i class="fa-solid fa-indian-rupee-sign"></i>190</p>
+            <a href="#" class="btn btn-warning mx-3">View Details</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-3">
+        <div class="card h-75 mx-auto" style="width:16rem;">
+          <img src="mangopiece.jpg" class="card-img-top h-50 img-thumbnail" alt="">
+          <div class="card-body text-center">
+            <h5 class="card-title">Mango Fruit Cake</h5>
+            <p class="card-text fs-4"><i class="fa-solid fa-indian-rupee-sign"></i>150</p>
+            <a href="#" class="btn btn-warning mx-3">View Details</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+<!-- BANNER -->
+<div class="container-fluid p-5 banner text mt-0" id="services">
+  <div class="row">
+    <div class="col-8">
+      <h2 class="lobster-regular">One Dozen at One Click</h2>
+      <p>
+        Discover a world of delightful sweetness made to brighten your day.
+        Each dessert is baked with care to bring you unforgettable taste and happiness.
+      </p>
+      <button class="text-light bg-danger fs-5 btn rounded-pill px-5">Order Now</button>
+    </div>
+
+    <div class="col">
+      <img src="chococup.webp" class="banner-img img-thumbnail" alt="">
+    </div>
+  </div>
+  <div class="container-fluid d-flex justify-content-center pt-5">
+    <div class="bg-light text-center pb-3 border rounded div-height me-5">
+      <p class="text fs-5 px-3 "><i class="fa-solid fa-check me-3"></i>Quality Product</p>
+    </div>
+
+    <div class="bg-light text-center pb-3 border rounded div-height me-5">
+      <p class="text fs-5 px-3"><i class="fa-solid fa-truck-fast me-3"></i>Free Shipping</p>
+    </div>
+
+    <div class="bg-light text-center pb-3 border rounded div-height me-5">
+      <p class="text fs-5 px-3"><i class="fa-solid fa-phone me-3"></i>24/7 Support</p>
+    </div>
+
+    <div class="bg-light text-center pb-3 border rounded div-height me-5">
+      <p class="text fs-5 px-3"><i class="fa-solid fa-cake-candles me-3"></i>Party Orders</p>
+    </div>
+  </div>
+</div>
+
+ 
+
+<!-- OUR PRODUCTS -->
+<div class="container-fluid p-5 text new" id="ourproducts">
+  <h3 class="text-center lobster-regular fs-1">Our Products</h3>
+
+  <div class="row">
+    <div class="col-3">
+      <div class="card h-75 mx-auto" style="width:16rem;">
+        <img src="pud4.jpeg" class="card-img-top h-50 img-thumbnail" alt="">
+        <div class="card-body text-center">
+          <h5 class="card-title">Caramel Pudding</h5>
+          <p>Creamy caramel pudding</p>
+          <p class="card-text fs-4"><i class="fa-solid fa-indian-rupee-sign"></i>120</p>
+          <a href="#" class="btn btn-warning mx-3">Place Order</a>
+          <i class="fa-solid fa-cart-shopping text-dark fs-4"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-3">
+      <div class="card h-75 mx-auto" style="width:16rem;">
+        <img src="almond.jpeg" class="card-img-top h-50 img-thumbnail" alt="">
+        <div class="card-body text-center">
+          <h5 class="card-title">Almond Croissant</h5>
+          <p>Buttery almond croissant</p>
+          <p class="card-text fs-4"><i class="fa-solid fa-indian-rupee-sign"></i>270</p>
+          <a href="#" class="btn btn-warning mx-3">Place Order</a>
+          <i class="fa-solid fa-cart-shopping text-dark fs-4"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-3">
+      <div class="card h-75 mx-auto" style="width:16rem;">
+        <img src="lemonblueberry.jpeg" class="card-img-top h-50 img-thumbnail" alt="">
+        <div class="card-body text-center">
+          <h5 class="card-title">Lemon Blueberry Cake</h5>
+          <p>Delightful blueberry cake</p>
+          <p class="card-text fs-4"><i class="fa-solid fa-indian-rupee-sign"></i>350</p>
+          <a href="#" class="btn btn-warning mx-3">Place Order</a>
+          <i class="fa-solid fa-cart-shopping text-dark fs-4"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-3">
+      <div class="card h-75 mx-auto" style="width:16rem;">
+        <img src="cookies.png" class="card-img-top h-50 img-thumbnail" alt="">
+        <div class="card-body text-center">
+          <h5 class="card-title">Chocolate Cookies</h5>
+          <p>Rich chocolate cookies</p>
+          <p class="card-text fs-4"><i class="fa-solid fa-indian-rupee-sign"></i>130</p>
+          <a href="#" class="btn btn-warning mx-3">Place Order</a>
+          <i class="fa-solid fa-cart-shopping text-dark fs-4"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row mt-4">
+
+    <div class="col-3">
+      <div class="card h-75 mx-auto" style="width:16rem;">
+        <img src="cakevanila.jpg" class="card-img-top h-50 img-thumbnail" alt="">
+        <div class="card-body text-center">
+          <h5 class="card-title">Vanilla Cake</h5>
+          <p>Soft vanilla cake</p>
+          <p class="card-text fs-4"><i class="fa-solid fa-indian-rupee-sign"></i>170</p>
+          <a href="#" class="btn btn-warning mx-3">Place Order</a>
+          <i class="fa-solid fa-cart-shopping text-dark fs-4"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-3">
+      <div class="card h-75 mx-auto" style="width:16rem;">
+        <img src="redvelvet.jpg" class="card-img-top h-50 img-thumbnail" alt="">
+        <div class="card-body text-center">
+          <h5 class="card-title">Red Velvet</h5>
+          <p>Classic red velvet</p>
+          <p class="card-text fs-4"><i class="fa-solid fa-indian-rupee-sign"></i>220</p>
+          <a href="#" class="btn btn-warning mx-3">Place Order</a>
+          <i class="fa-solid fa-cart-shopping text-dark fs-4"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-3">
+      <div class="card h-75 mx-auto" style="width:16rem;">
+        <img src="black.avif" class="card-img-top h-50 img-thumbnail" alt="">
+        <div class="card-body text-center">
+          <h5 class="card-title">Black Forest</h5>
+          <p>Rich black forest</p>
+          <p class="card-text fs-4"><i class="fa-solid fa-indian-rupee-sign"></i>230</p>
+          <a href="#" class="btn btn-warning mx-3">Place Order</a>
+          <i class="fa-solid fa-cart-shopping text-dark fs-4"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-3">
+      <div class="card h-75 mx-auto" style="width:16rem;">
+        <img src="pink.jpg" class="card-img-top h-50 img-thumbnail" alt="">
+        <div class="card-body text-center">
+          <h5 class="card-title">Strawberry Piece Cake</h5>
+          <p>Fresh strawberry piece cake</p>
+          <p class="card-text fs-4"><i class="fa-solid fa-indian-rupee-sign"></i>190</p>
+          <a href="#" class="btn btn-warning mx-3">Place Order</a>
+          <i class="fa-solid fa-cart-shopping text-dark fs-4"></i>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- REVIEWS -->
+<div class="container-fluid banner p-5" id="reviews">
+  <h2 class="text-center text lobster-regular fs-2 mb-4">Reviews</h2>
+
+  <div class="row">
+
+    <div class="col-3">
+      <p>
+        <i class="fa-solid fa-star text-warning"></i><i class="fa-solid fa-star text-warning"></i>
+        <i class="fa-solid fa-star text-warning"></i><i class="fa-solid fa-star text-warning"></i>
+        <br>
+        I ordered a custom birthday cake, and it exceeded all expectations.
+        Super fresh and soft. Highly recommended!
+        <br><strong>Michael S.</strong>
+      </p>
+    </div>
+
+    <div class="col-3">
+      <p>
+        <i class="fa-solid fa-star text-warning"></i><i class="fa-solid fa-star text-warning"></i>
+        <i class="fa-solid fa-star text-warning"></i><i class="fa-solid fa-star text-warning"></i>
+        <i class="fa-solid fa-star-half text-warning"></i>
+        <br>
+        The chocolate truffle cake was incredibly rich and moist.
+        Perfect—not too sweet. Will order again!
+        <br><strong>Emily R.</strong>
+      </p>
+    </div>
+
+    <div class="col-3">
+      <p>
+        <i class="fa-solid fa-star text-warning"></i><i class="fa-solid fa-star text-warning"></i>
+        <i class="fa-solid fa-star text-warning"></i>
+        <br>
+        The strawberry cream cake was amazing!
+        Light, fluffy, and simply heavenly.
+        <br><strong>Aisha K.</strong>
+      </p>
+    </div>
+
+    <div class="col-3">
+      <p>
+        <i class="fa-solid fa-star text-warning"></i><i class="fa-solid fa-star text-warning"></i>
+        <i class="fa-solid fa-star text-warning"></i><i class="fa-solid fa-star text-warning"></i>
+        <i class="fa-solid fa-star text-warning"></i>
+        <br>
+        Ordered a red velvet cake—outstanding!
+        Smooth texture and beautiful presentation.
+        <br><strong>Teena M.</strong>
+      </p>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- CONTACT -->
+<div class="container-fluid mt-0 new" id="contact">
+  <h2 class="text-center text lobster-regular fs-3 p-5">Contact Us</h2>
+
+  <div class="row mt-4">
+
+    <div class="col-5">
+      <a class="navbar-brand fs-2 fst-italic fw-bold text" href="#">
+        Sweeto <i class="fa-solid fa-cake-candles fs-4"></i>
+      </a>
+      <br>
+
+      <p>
+        <strong>Something Sweet For Everyone.</strong><br>
+        Reach out to us for delicious cakes, quick support, and custom creations!
+      </p>
+    </div>
+
+    <div class="col-5">
+      <p>
+        <strong>Useful links.</strong><br>
+        <p>About us</p>
+        <p>Our products</p>
+        <p>Services</p>
+
+      </p>
+    </div>
+    
+
+    <div class="col">
+      <p class="fs-4"><strong>9876543211</strong></p>
+      <p>
+        <strong>
+          sweeto@gmail.com<br>
+          5th Floor, New York, NY 1089
+        </strong>
+      </p>
+
+      <i class="fa-brands fa-square-facebook fs-3 me-2"></i>
+      <i class="fa-brands fa-square-instagram fs-3 me-2"></i>
+      <i class="fa-brands fa-whatsapp fs-3 me-2"></i>
+      <i class="fa-solid fa-envelope fs-3"></i>
+    </div>
+
+  </div>
+</div>
+
+<footer class="banner text-center p-2">
+    <p> <i class="fa-regular fa-copyright"></i> 2015 Sweeto | Privacy Policy |All Rights Reserved</p>
+</footer>
+</body>
+</html>
+
